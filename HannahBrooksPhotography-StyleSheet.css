@@ -74,8 +74,8 @@
 /* START OF CSS FROM "http://static.tumblr.com/cmghtlm/n6enj2o9x/font-awesome.min.css" */
 
 @font-face{font-family:FontAwesome;src:url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0);src:url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
-.fa-list-alt:before{content:"\f022"}
-.fa-list:before{content:"\f03a"}
+
 .fa-list-ul:before{content:"\f0ca"}
-.fa-list-ol:before{content:"\f0cb"}
 .fa-instagram:before{content:"\f16d"}
+.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
+.fa-li.fa-lg{left:-1.85714286em}
