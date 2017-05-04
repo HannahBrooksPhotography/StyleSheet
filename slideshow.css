@@ -1,0 +1,190 @@
+/*External stylesheet for slideshow pages*/
+    
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+        
+        
+        body {
+            
+            background-color: transparent;
+            height:100vh;
+            max-width: 100vw;
+            overflow:hidden;
+            margin: 0;
+        }
+        
+        body a {
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out
+        }
+        
+        a:hover {
+            cursor:pointer; 
+            opacity:0.5;
+        }
+        
+        img {
+            cursor: pointer;
+            opacity:0.6;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+    
+        /* Big image slide show*/
+        
+        .imgWrap {
+            height:81vh;
+            overflow:hidden;
+        }
+        
+        .innerImgWrap {
+            height: 81vh;
+            width:100vw;
+            margin-left:auto;
+            margin-right:auto;
+            position:relative;
+        }
+        
+        .innerImgWrap img {
+            max-height:81vh;
+            max-width:81vw;
+            height:auto;
+            width:auto;
+        }
+        
+        
+        .previous {
+            position:absolute;
+            display:block;
+            top:0vh;
+            right: 95vw;
+        }
+        
+        .innerImgWrap .selected {
+            margin-left:auto;
+            margin-right:auto;
+            opacity:1;
+            display:block;
+        }
+        .innerImgWrap .first {
+            margin-left:auto;
+            margin-right:auto;
+            opacity:1;
+            display:block;
+        }
+        
+        .next {
+            position:absolute;
+            display:block;
+            top:0vh;
+            left:95vw;
+        }
+        
+        .hideImg {
+            position:absolute;
+            margin-left:150vw;
+            display:inline-block;
+        }
+        
+        /*Thumbnail Slideshow*/
+
+        
+        .imgThumbnail {
+            background-color:black;
+            height:19vh;
+            width: 120vw;
+            opacity:0.8;
+            overflow:scroll;
+            font-size:0;
+            position: relative;
+        }
+        
+        .thumbImg {
+            margin-right:-400vw; /* corrected to exact value using jquery. Number of images * -510px = margin-right*/
+            overflow:hidden;
+        }
+        .imgThumbnail img {
+            height:17vh;
+            width:17vh;
+            display:inline-block;
+            border-right: 2px solid black;
+            border-left:2px solid black;
+            margin-top:1vh;
+        }
+        
+        .imgThumbnail .selected {
+            opacity:1;
+        }
+        
+            .next-arrow {
+				position: fixed; 
+				top: 40vh; 
+				right: 1vw;
+				height: 5vh; 
+				width: 5vh;  
+			}
+			
+			.previous-arrow {
+			
+				position: fixed; 
+				top: 40vh; 
+				left: 1vw;  
+				height: 5vh; 
+				width: 5vh; 
+			}
+			
+			line {
+				stroke: #303030; 
+				stroke-width: 2; 
+			}
+			
+			circle {
+				stroke: #303030; 
+				stroke-width: 2;
+				fill:none;
+			}
+			
+        @media screen and (max-width: 481px){
+
+        
+        .innerImgWrap {
+            height: 70vh;
+        }
+        .imgWrap {
+            
+            height: 70vh;
+            width: 1px;
+            min-width: 100%;
+            *width: 100%;
+        }
+        
+        .imgThumbnail {
+            
+            width: 1px;
+            min-width: 100%;
+            *width: 100%;
+        }
+        
+        .innerImgWrap img {
+            max-height:70vh;
+            max-width:70vw;
+        }
+        
+    
+        .previous {
+            right: 90vw;
+        }
+        
+        .next {
+            left:90vw;
+        }
+        
+        
+        }
