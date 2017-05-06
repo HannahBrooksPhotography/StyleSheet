@@ -68,7 +68,16 @@
             font-family: Helvetica ;
             font-weight: 300;
             font-size: 1.2rem;
-            -webkit-transition: all .2s ease-in-out;
+        }
+
+	.exitButton a {
+        	-webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        
+        .left-off-canvas-toggle a {
+        	-webkit-transition: all .2s ease-in-out;
             -moz-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
         }
