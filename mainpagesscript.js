@@ -9,7 +9,7 @@ $(document).ready(function(){
                $('iframe').hide();
                
                $('td a').click(function(){
-                  $('iframe').show(); 
+                  $('iframe').show().focus(); 
                   $('.cover2').css('margin-left','0%');
                   $('.exitButton').show();
                   $('.exitButton').css('margin-left','0%');
