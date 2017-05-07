@@ -177,6 +177,18 @@
             max-width:70vw;
         }
         
+        .innerImgWrap .selected, .first, .next, .previous {
+            position:absolute;
+            top:0;
+            bottom:0;
+            margin:auto;
+            
+        }
+        
+        .innerImgWrap .selected, .first {
+            left:0;
+            right:0;
+        }
     
         .previous {
             right: 90vw;
@@ -186,5 +198,14 @@
             left:90vw;
         }
         
+        .next-arrow, .previous-arrow {
+            height:8vh;
+            width:8vh;
+            opacity:0.5;
+        }
+        
+        circle, line {
+            stroke:white;
+        }
         
         }
