@@ -223,7 +223,7 @@
 		}
         
         @media screen and (max-width: 481px){
-            h2 {
+                    h2 {
                 font-size:1.8rem;
                 text-align:center;
                 width:100vw;
@@ -253,8 +253,20 @@
             height:90vh;
             position:fixed;
             margin:auto;
-            z-index:5;
             border-color:transparent;
         }
+        
+        .exitButton {
+            height:6vh;
+            width:6vh;
+            left:1vw;
+            opacity:0.5;
         }
         
+        line, circle {
+            stroke:white;
+        }
+        .cover2 p {
+            display:none; 
+        }
+        }
