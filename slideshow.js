@@ -121,11 +121,11 @@ $(document).ready(function(){
                	var imgThumbWidth = (thumbsTotal - thumbsInView)*17 + 1; //width of the hidden portion of the division (in vw) containing all of the img thumbnails
                	$('.thumbImg').css("margin-right","-"+imgThumbWidth+"vh"); //sets size (margin-right) of imgThumbnail class so there isn't an infinite scroll. 
                   
-               //Slides tab (.imgThumbnail) when it goes out of site and you've navigated to the next/previous picture               
+               //Scrolls tab (.imgThumbnail) when it goes out of site and you've navigated to the next/previous picture               
                	$('img').click(function () {
 			var imgNumber = $('.thumbImg .selected').parent().attr('class').replace('img', '');
 			var sp1 = (0.17*vpHeight)*imgNumber; //scroll position if thumbnail were on left side of screen
-			var sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight);
+			var sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight); //scroll position if thumbnail were on right side of screen
 						
 			var ap = $('.imgThumbnail').scrollLeft(); //actual position of scroll/image
 						
