@@ -125,7 +125,7 @@ $(document).ready(function(){
                	$('img').click(function () {
 			var imgNumber = $('.thumbImg .selected').parent().attr('class').replace('img', '');
 			var sp1 = (0.17*vpHeight)*imgNumber; //scroll position if thumbnail were on left side of screen
-			sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight);
+			var sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight);
 						
 			var ap = $('.imgThumbnail').scrollLeft(); //actual position of scroll/image
 						
