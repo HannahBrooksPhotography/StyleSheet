@@ -127,8 +127,8 @@
 				position: fixed; 
 				top: 40vh; 
 				right: 1vw;
-				height: 5vh; 
-				width: 5vh;  
+				height: 6vh; 
+				width: 6vh;  
 			}
 			
 			.previous-arrow {
@@ -141,12 +141,12 @@
 			}
 			
 			line {
-				stroke: #303030; 
+				stroke: #707070; 
 				stroke-width: 2; 
 			}
 			
 			circle {
-				stroke: #303030; 
+				stroke: #707070; 
 				stroke-width: 2;
 				fill:none;
 			}
