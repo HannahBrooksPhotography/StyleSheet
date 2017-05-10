@@ -107,7 +107,6 @@
         }
         
         .thumbImg {
-            margin-right:-400vw; /* corrected to exact value using jquery. Number of images * -510px = margin-right*/
             overflow:hidden;
         }
         .imgThumbnail img {
