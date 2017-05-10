@@ -3,8 +3,6 @@ $(document).ready(function(){
                //Big picture slides
 
                $(".innerImgWrap img").click(function() {
-                   
-                  var imgClass = $(this).attr('class'); //connects clicks
                   
                   //Large Image Slide Show Effect 
                   $('.innerImgWrap img').removeClass('first');     
@@ -114,33 +112,48 @@ $(document).ready(function(){
                     $('.thumbImg .' + imgClass).children().addClass('selected');
                  });
                  
-                var vpWidth = $(window).width();
-               	var vpHeight = $(window).height();
-               	var thumbsInView = vpWidth/(0.17*vpHeight); //0.17*vpHeight = 17vh, which is the picture width. 
+                 //Window size dependent functions
+
+                vpWidth = $(window).width();
+               	vpHeight = $(window).height();
+               	thumbsInView = vpWidth/(0.17*vpHeight); //0.17*vpHeight = 17vh, which is the picture width. 
                	var thumbsTotal = $(".thumbImg img").length;
-               	var imgThumbWidth = (thumbsTotal - thumbsInView)*17 + 1; //width of the hidden portion of the division (in vw) containing all of the img thumbnails
+               	imgThumbWidth = (thumbsTotal - thumbsInView)*17 + 1; //width of the hidden portion of the division (in vw) containing all of the img thumbnails
                	$('.thumbImg').css("margin-right","-"+imgThumbWidth+"vh"); //sets size (margin-right) of imgThumbnail class so there isn't an infinite scroll. 
                   
                //Scrolls tab (.imgThumbnail) when it goes out of site and you've navigated to the next/previous picture               
                	$('img').click(function () {
-			var imgNumber = $('.thumbImg .selected').parent().attr('class').replace('img', '');
-			var sp1 = (0.17*vpHeight)*imgNumber; //scroll position if thumbnail were on left side of screen
-			var sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight); //scroll position if thumbnail were on right side of screen
+					imgNumber = $('.thumbImg .selected').parent().attr('class').replace('img', '');
+					sp1 = (0.17*vpHeight)*imgNumber; //scroll position if thumbnail were on left side of screen
+					sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight); //scroll position if thumbnail were on right side of screen
 						
-			var ap = $('.imgThumbnail').scrollLeft(); //actual position of scroll/image
+					ap = $('.imgThumbnail').scrollLeft(); //actual position of scroll/image
 						
-			if(ap <= sp1 && ap >= sp2){
-				return;
-			}
-			else if(ap > sp1) {
-				$('.imgThumbnail').animate({scrollLeft: sp2}, 1000);
-			}
-			else { //i.e. if a > sp2
-				$('.imgThumbnail').animate({scrollLeft: sp1}, 1000);
-			}
-		});
-
-   
+					if(ap <= sp1 && ap >= sp2){
+						return;
+					}
+					else if(ap > sp1) {
+						$('.imgThumbnail').animate({scrollLeft: sp2}, 1000);
+					}
+					else { //i.e. if a > sp2
+						$('.imgThumbnail').animate({scrollLeft: sp1}, 1000);
+					}
+				});
+                
+                //changes variables on resize/orientationchange
+                
+                var changeSizeVar = function () {
+                    vpWidth = $(window).width();
+               	    vpHeight = $(window).height();
+               	    thumbsInView = vpWidth/(0.17*vpHeight);
+               	    imgThumbWidth = (thumbsTotal - thumbsInView)*17 + 1;
+               	    $('.thumbImg').css("margin-right","-"+imgThumbWidth+"vh");
+                    
+                };
+                
+                window.addEventListener("resize", changeSizeVar, false);
+                window.addEventListener("orientationchange", changeSizeVar, false);
+    
                 //No Right click
                 
                 $('body').on('contextmenu', 'img', function(e){ return false; });
