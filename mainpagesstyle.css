@@ -77,11 +77,16 @@
             transition: all .2s ease-in-out;
         }
         
-        .left-off-canvas-toggle a {
+        .left-off-canvas-toggle {
         	-webkit-transition: all .2s ease-in-out;
             -moz-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
         }
+
+	.left-off-canvas-toggle:hover {
+		cursor:pointer; 
+		opacity:0.5;
+	}
         	
         	
         a:hover {
