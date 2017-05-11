@@ -176,7 +176,7 @@
         
         /*Picture Slide*/
         
-        iframe {
+        #slide {
             height:90vh;
 	    width:100%; 
             position:absolute;
