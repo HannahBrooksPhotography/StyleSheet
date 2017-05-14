@@ -53,9 +53,9 @@ $(document).ready(function(){
         					$(".previous").trigger('click');
         				break;
 
-        				default: return; // exit this handler for other keys
+        				default: return; 
     				}
-   				 	e.preventDefault(); // prevent the default action (scroll / move caret)
+   				 	e.preventDefault();
 				});
                
 
@@ -116,18 +116,18 @@ $(document).ready(function(){
 
                 vpWidth = $(window).width();
                	vpHeight = $(window).height();
-               	thumbsInView = vpWidth/(0.17*vpHeight); //0.17*vpHeight = 17vh, which is the picture width. 
+               	thumbsInView = vpWidth/(0.17*vpHeight);
                	var thumbsTotal = $(".thumbImg img").length;
-               	imgThumbWidth = (thumbsTotal - thumbsInView)*17 + 1; //width of the hidden portion of the division (in vw) containing all of the img thumbnails
-               	$('.thumbImg').css("margin-right","-"+imgThumbWidth+"vh"); //sets size (margin-right) of imgThumbnail class so there isn't an infinite scroll. 
+               	imgThumbWidth = (thumbsTotal - thumbsInView)*17 + 1; 
+               	$('.thumbImg').css("margin-right","-"+imgThumbWidth+"vh"); 
                   
-               //Scrolls tab (.imgThumbnail) when it goes out of site and you've navigated to the next/previous picture               
+               //Scrolls .imgThumbnail            
                	$('img').click(function () {
 					imgNumber = $('.thumbImg .selected').parent().attr('class').replace('img', '');
-					sp1 = (0.17*vpHeight)*imgNumber; //scroll position if thumbnail were on left side of screen
-					sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight); //scroll position if thumbnail were on right side of screen
+					sp1 = (0.17*vpHeight)*imgNumber; 
+					sp2=(0.17*vpHeight*imgNumber)-vpWidth+(0.17*vpHeight); 
 						
-					ap = $('.imgThumbnail').scrollLeft(); //actual position of scroll/image
+					ap = $('.imgThumbnail').scrollLeft(); 
 						
 					if(ap <= sp1 && ap >= sp2){
 						return;
@@ -135,7 +135,7 @@ $(document).ready(function(){
 					else if(ap > sp1) {
 						$('.imgThumbnail').animate({scrollLeft: sp2}, 1000);
 					}
-					else { //i.e. if a > sp2
+					else { 
 						$('.imgThumbnail').animate({scrollLeft: sp1}, 1000);
 					}
 				});
@@ -159,20 +159,3 @@ $(document).ready(function(){
                 $('body').on('contextmenu', 'img', function(e){ return false; });
 
             });
-               
-                                          //Double Click
-               
-               //$(".innerImgWrap img").dblclick(function() {
-                   
-                 // var imgClass = $(this).attr('class'); //connects clicks
-                  
-                  //$('.innerImgWrap img').removeClass('first');     
-                  //$('.innerImgWrap img').removeClass('selected'); 
-                  //$('.innerImgWrap img').removeClass('next');
-                  //$('.innerImgWrap img').removeClass('previous');
-                  //$('.innerImgWrap img').addClass('hideImg');
-                  //$(this).next().next().removeClass('hideImg').addClass('next');
-                  //$(this).removeClass('hideImg').addClass('previous');
-                  //$(this).next().removeClass('hideImg').addClass('selected');
-                  
-               //});
