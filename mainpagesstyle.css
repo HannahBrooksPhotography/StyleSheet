@@ -6,7 +6,7 @@
 	    cursor:default; 
         }
         
-        h2 {
+        h1, h2 {
             font-size: 2.5rem; 
             width: 65vw;
             color: #585858; 
@@ -16,7 +16,7 @@
             margin:auto;
             letter-spacing:0.5rem;
         }
-            h2 span {
+            h1 span, h2 span {
             letter-spacing:1rem;
             }
             
@@ -230,7 +230,7 @@
 		}
         
         @media screen and (max-width: 1060px){
-                    h2 {
+                    h1, h2 {
                 font-size:1.8rem;
                 text-align:center;
                 width:100vw;
