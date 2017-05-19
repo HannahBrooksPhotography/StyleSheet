@@ -21,7 +21,8 @@
         	background-color: gray; 
     	 	overflow:scroll; 
     	 	max-height: 100vh; 
-    	 	max-width:100000vw; 
+    	 	max-width:100000vw;
+                    cursor: default; 
     	 }
     	 
     	 .hideImg, .previous, .next, .first {
@@ -39,8 +40,25 @@
         	text-align: center; 
         }
         
+        /* no script navigation bread crumbs */
+
+    	.crumbs p {
+        	color: white; 
+        	text-align: left; 
+        	display: inline-block; 
+        }
+        	
+        .crumbs a {
+        	color: white; 
+        	text-align: left; 
+        	display: inline-block; 
+        }
         
-        /* No script navigation menue */
+        .crumbs span {
+        	color: #333; 
+        }
+        
+        /* No script navigation menu */
         .menu-content li {
             color: #404040;
             font-family: 'Source Sans Pro', Arial, sans-serif;
