@@ -209,3 +209,62 @@
         }
         
         }
+
+<noscript>
+	h1 {
+        	margin:0;
+        	text-align: center; 
+        	font-size: 2.5rem;
+            color: #404040;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-weight: 300; 
+            letter-spacing:0.5rem;
+        }
+        
+        .imgThumbnail, .next-arrow, .previous-arrow {
+        	display:none; 
+        }
+        
+    	.innerImgWrap img {
+    		cursor:default; 
+    		opacity: 1; 
+    	}
+    	
+    	 body, .imgWrap {
+        	background-color: gray; 
+    	 	overflow:scroll; 
+    	 	max-height: 100vh; 
+    	 	max-width:100000vw; 
+    	 }
+    	 
+    	 .hideImg, .previous, .next, .first {
+    	 	left:0; 
+    	 	right:0; 
+            position:relative;
+            margin-left:auto; 
+            margin-right:auto;
+            margin-bottom: 5vh; 
+            display:block;
+        }
+        
+        noscript p {
+        	color: white; 
+        	text-align: center; 
+        }
+        
+        
+        /* No script navigation */
+        .menu-content li{
+            color: #404040;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-weight: 300;
+            list-style: none;  
+        }
+        
+        .menu-content a {
+        	text-decoration:none; 
+        }
+        .menu-content a:visited {
+            color: #404040;
+        }
+</noscript>
