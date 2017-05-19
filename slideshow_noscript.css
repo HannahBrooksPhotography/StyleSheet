@@ -1,7 +1,7 @@
-	h1 {
-        	margin:0;
-        	text-align: center; 
-        	font-size: 2.5rem;
+          h1 {
+            margin:0;
+            text-align: center; 
+            font-size: 2.5rem;
             color: #404040;
             font-family: 'Source Sans Pro', Arial, sans-serif;
             font-weight: 300; 
@@ -40,8 +40,8 @@
         }
         
         
-        /* No script navigation */
-        .menu-content li{
+        /* No script navigation menue */
+        .menu-content li {
             color: #404040;
             font-family: 'Source Sans Pro', Arial, sans-serif;
             font-weight: 300;
