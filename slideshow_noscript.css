@@ -33,13 +33,7 @@
             margin-right:auto;
             margin-bottom: 5vh; 
             display:block;
-        }
-        
-        noscript p {
-        	color: white; 
-        	text-align: center; 
-        }
-        
+} 
         /* no script navigation bread crumbs */
 
     	.crumbs p {
@@ -71,4 +65,18 @@
         }
         .menu-content a:visited {
             color: #404040;
+        }
+
+        /* No script for main pages */
+        .requiresScript {
+            display:none; 
+        }
+        .left-off-canvas-menu {
+            margin-left:0;
+            background-color:#333; 
+            -webkit-transform: translate3d(0,0,0); 
+            -moz-transform: translate3d(0,0,0); 
+            -ms-transform: translate3d(0,0,0); 
+            -o-transform: translate3d(0,0,0); 
+            transform: translate3d(0,0,0);
         }
